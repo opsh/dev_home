@@ -1,177 +1,294 @@
-<!doctype html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE html>
+<html>
 <head>
-<meta charset="utf-8">
-<title>HMFAYSAL V2</title>
-<meta name="description" content="opsh and cookbooks">
-<meta name="keywords" content="Jekyll, theme, responsive, blog, template">
+	<meta charset="utf-8">
+	<title>opsh</title>
+	
+	<meta name="author" content="opsh">
 
+	<!-- Enable responsive viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Open Graph -->
-<meta property="og:locale" content="en_US">
-<meta property="og:type" content="article">
-<meta property="og:title" content="HMFAYSAL V2">
-<meta property="og:description" content="opsh and cookbooks">
-<meta property="og:url" content="http://opsh.github.io/dev_home/index.html">
-<meta property="og:site_name" content="HMFAYSAL V2">
+	<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 
+	<!-- Le styles -->
+	<link href="/assets/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/assets/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="/assets/resources/syntax/syntax.css" rel="stylesheet">
+	<link href="/assets/css/style.css" rel="stylesheet">
 
+	<!-- Le fav and touch icons -->
+	<!-- Update these with your own images
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	-->
 
-
-
-<link rel="canonical" href="http://opsh.github.io/dev_home/">
-<link href="http://opsh.github.io/dev_home/feed.xml" type="application/atom+xml" rel="alternate" title="HMFAYSAL V2 Feed">
-
-
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Google Webfonts -->
-<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
-<!-- For all browsers -->
-<link rel="stylesheet" href="http://opsh.github.io/dev_home/assets/css/main.min.css">
-
-<!--[if (lt IE 9) & (!IEMobile)]>
-<link rel="stylesheet" href="http://opsh.github.io/dev_home/assets/css/ie.min.css">
-<![endif]-->
-
-<meta http-equiv="cleartype" content="on">
-
-<!-- Load Modernizr -->
-
-<script src="http://opsh.github.io/dev_home/assets/js/modernizr.js"></script>
-
-<!-- Icons -->
-<!-- 16x16 -->
-<link rel="shortcut icon" href="http://opsh.github.io/dev_home/favicon.ico">
-<!-- 32x32 -->
-<link rel="shortcut icon" href="http://opsh.github.io/dev_home/favicon.png">
-<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
-<link rel="apple-touch-icon-precomposed" href="http://opsh.github.io/dev_home/images/apple-touch-icon-precomposed.png">
-<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://opsh.github.io/dev_home/images/apple-touch-icon-72x72-precomposed.png">
-<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://opsh.github.io/dev_home/images/apple-touch-icon-114x114-precomposed.png">
-<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://opsh.github.io/dev_home/images/apple-touch-icon-144x144-precomposed.png">
-
+	<link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
 </head>
 
-<body class="home" itemscope itemtype="http://schema.org/WebPage">
+<body>
+	<nav class="navbar navbar-default visible-xs" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+			<a type="button" class="navbar-toggle nav-link" href="http://github.com/ops-dev-sh">
+				<i class="fa fa-github"></i>
+			</a>
+			
+			
+			
+			<a type="button" class="navbar-toggle nav-link" href="mailto:code@servsops.com">
+				<i class="fa fa-envelope"></i>
+			</a>
+			
+			<a class="navbar-brand" href="/">
+				<img src="http://www.gravatar.com/avatar/?s=35" class="img-circle" />
+				
+			</a>
+		</div>
 
-<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="/">Home</a></li>
+				<li><a href="/categories.html">Categories</a></li>
+				<li><a href="/tags.html">Tags</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</nav>
 
-<div id="outer-wrap">
-<div id="inner-wrap">
+	<!-- nav-menu-dropdown -->
+	<div class="btn-group hidden-xs" id="nav-menu">
+		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+			<i class="fa fa-bars"></i>
+		</button>
+		<ul class="dropdown-menu" role="menu">
+			<li><a href="/"><i class="fa fa-home"></i>Home</a></li>
+			<li><a href="/categories.html"><i class="fa fa-folder"></i>Categories</a></li>
+			<li><a href="/tags.html"><i class="fa fa-tags"></i>Tags</a></li>
+			<li class="divider"></li>
+			<li><a href="#"><i class="fa fa-arrow-up"></i>Top of Page</a></li>
+		</ul>
+	</div>
 
-    <header id="top" role="banner">
-        <div class="block">
-            <h1 class="block-title">HMFAYSAL V2</h1>
-            <a class="nav-btn" id="nav-open-btn" href="#nav">Navigation</a>
-        </div>
-    </header>
-
-    <nav id="nav" role="navigation">
-        <div class="block">
-            <h2 class="block-title">Chapters</h2>
-            <ul>
-                
-				<li><a href="http://opsh.github.io/dev_home/" >Home</a></li>
-		        
-				<li><a href="http://opsh.github.io/dev_home/about/" >About</a></li>
-		        
-				<li><a href="http://opsh.github.io/dev_home/articles/" >Articles</a></li>
-		        
-				<li><a href="http://opsh.github.io/dev_home/theme-setup/" >Setup</a></li>
-		        
-				<li><a href="http://opsh.github.io/dev_home/technical-details/" >T-Details</a></li>
-		        
-		        <li><a href="http://opsh.github.io/dev_home/feed.xml" title="Atom/RSS feed">Feed</a>
-            </ul>
-            <a class="close-btn" id="nav-close-btn" href="#top">Return to Content</a>
-        </div>
-    </nav>
-
-
-
-<div class="article-author-side">
-  <img src="http://opsh.github.io/dev_home/images/" class="bio-photo" alt="gankkank bio photo"></a>
-<h3>gankkank</h3>
-<p>Bio</p>
+	<div class="col-sm-3 sidebar hidden-xs">
+		<! -- sidebar.html -->
+<header class="sidebar-header" role="banner">
+	<a href="/">
+		<img src="http://www.gravatar.com/avatar/?s=150" class="img-circle" />
+	</a>
+	<h3 class="title">
+        <a href="/"></a>
+    </h3>
+</header>
 
 
-
-
-
-
-<a href="http://github.com/opsh" class="author-social" target="_blank"><i class="icon-github"></i> Github</a>
-
-
+<div id="bio" class="text-center">
+	opsh and ops-cookbooks
 </div>
 
-<div id="index" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
-  <h3><a href="http://opsh.github.io/dev_home/articles/">Articles</a></h3>
-      
-  <article itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
-    <h2 itemprop="headline"><a href="http://opsh.github.io/dev_home/articles/code-highlighting-post" rel="bookmark" title="Syntax Highlighting Post">Syntax Highlighting Post</a></h2>
-    <p itemprop="text">Demo post displaying the various ways of highlighting code in Markdown.</p>
-  </article>
-      
-  <article itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
-    <h2 itemprop="headline"><a href="http://opsh.github.io/dev_home/articles/readability-feature-post" rel="bookmark" title="Post with Large Feature Image and Text">Post with Large Feature Image and Text</a></h2>
-    <p itemprop="text">Custom written post descriptions are the way to go... if you're not lazy.</p>
-  </article>
-      
-  <article itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
-    <h2 itemprop="headline"><a href="http://opsh.github.io/dev_home/articles/sample-post-images" rel="bookmark" title="A Post with Images">A Post with Images</a></h2>
-    <p itemprop="text">Examples and code for displaying images in posts.</p>
-  </article>
-      
-  <article itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
-    <h2 itemprop="headline"><a href="http://opsh.github.io/dev_home/articles/readability-post" rel="bookmark" title="Testing Readability with a Bunch of Text">Testing Readability with a Bunch of Text</a></h2>
-    <p itemprop="text">A ton of text to test readability.</p>
-  </article>
-      
-  <article itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
-    <h2 itemprop="headline"><a href="http://opsh.github.io/dev_home/articles/sample-post" rel="bookmark" title="Sample Post">Sample Post</a></h2>
-    <p itemprop="text">Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more.</p>
-  </article>
+
+<div id="contact-list" class="text-center">
+	<ul class="list-unstyled list-inline">
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="https://github.com/ops-dev-sh">
+				<i class="fa fa-github-alt fa-lg"></i>
+			</a>
+		</li>
+		
+		
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="mailto:code@servsops.com">
+				<i class="fa fa-envelope fa-lg"></i>
+			</a>
+		</li>
+		
+	</ul>
+	<ul id="contact-list-secondary" class="list-unstyled list-inline">
+		
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="/feed.xml">
+				<i class="fa fa-rss fa-lg"></i>
+			</a>
+		</li>
+	</ul>
+</div>
+<! -- sidebar.html end -->
+
+	</div>
+
+	<div class="col-sm-9 col-sm-offset-3">
+		<div class="page-header">
+  <h1>opsh </h1>
+</div>
+
+
+
+<article class="home">
+
+  <span class="post-date">
+    
+    November
+    15th,
+    
+    2013
+  </span>
+
+  <h2>
+    <a href="/general/setup/demo/2013/11/15/hello-world.html">Hello World!</a>
+  </h2>
+
+  <div>
+    
+    <p><strong>dbyll</strong> is minimalist, stylish theme for jekyll. Supports gravatar, account links (github, twitter, e-mail, pinterest, résume file) and a bio.  </p>
+
+<p><strong>dbyll</strong> is brought to you by <strong><a href="http://ismaildemirbilek.com">dbtek</a></strong>. Open sourced under <a href="http://opensource.org/licenses/MIT">MIT</a> license.</p>
+
+<h3 id="dbyll-is-on-github">dbyll is on GitHub</h3>
+
+<p><a class="btn btn-default" href="https://github.com/dbtek/dbyll">Grab your copy now!</a></p>
+
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+
+  <span class="post-date">
+    
+    November
+    15th,
+    
+    2013
+  </span>
+
+  <h2>
+    <a href="/general/setup/demo/2013/11/15/configuration.html">Configuration</a>
+  </h2>
+
+  <div>
+    
+    <p>In your config file change these settings</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">dbyll</span>
+<span class="l-Scalar-Plain">author</span><span class="p-Indicator">:</span>  
+  <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">yourname</span>  
+  <span class="l-Scalar-Plain">email</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">youremail</span>  
+  <span class="l-Scalar-Plain">github</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">asd123</span>  
+  <span class="l-Scalar-Plain">twitter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">asd123</span>  
+  <span class="l-Scalar-Plain">pinterest</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">asd123</span>  
+  <span class="l-Scalar-Plain">linkedin</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">asd123</span>  
+  <span class="l-Scalar-Plain">resume</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">asd123</span>  
+  <span class="l-Scalar-Plain">bio</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Your stylish,  minimalist theme!</span>  
+  <span class="l-Scalar-Plain">email_md5</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">md5ofemail</span></code></pre></div>
+
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+
+  <span class="post-date">
+    
+    November
+    14th,
+    
+    2013
+  </span>
+
+  <h2>
+    <a href="/general/demo/sample/2013/11/14/sample-2.html">Sample 2</a>
+  </h2>
+
+  <div>
+    
+    
+    Sample placeholder post.
+    
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+
+  <span class="post-date">
+    
+    November
+    14th,
+    
+    2013
+  </span>
+
+  <h2>
+    <a href="/general/demo/2013/11/14/sample.html">Sample</a>
+  </h2>
+
+  <div>
+    
+    
+    Sample placeholder post.
+    
+    
+  </div>
+
+</article>
+
+<hr/>
+
+<ul class="pager"> 
+
   
-</div><!-- /#index -->
-
-<div class="footer-wrap">
-  <footer>
-    <span>&copy; 2014 gankkank. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://www.theevilgenius.tk/">HMFAYSAL V2</a> theme.</span>
-
-  </footer>
-</div><!-- /.footer-wrap -->
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="http://opsh.github.io/dev_home/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-<script src="http://opsh.github.io/dev_home/assets/js/scripts.min.js"></script>
-<script src="http://opsh.github.io/dev_home/assets/js/main.js"></script>
-
-<!-- Asynchronous Google Analytics snippet -->
-<script>
-  var _gaq = _gaq || [];
-  var pluginUrl = 
- '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
-  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
-  _gaq.push(['_setAccount', 'UA-39365944-4']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
+  <li class="previous disabled">
+    <a>&larr; Newer</a>
+  </li>
+  
+  
+  <li>
+    <span class="page_number">Page: 1 of 1</span>
+  </li>
 
   
+  <li class="next disabled">
+    <a>Older &rarr;</a>        
+  </li>
+  
+
+</ul>
+
+
+
+
+		<footer>
+			<hr/>
+			<p>
+				&copy; 2014 opsh with Jekyll. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
+			</p>
+		</footer>
+	</div>
+
+	<script type="text/javascript" src="/assets/resources/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/assets/resources/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/assets/js/app.js"></script>
 </body>
 </html>
+
