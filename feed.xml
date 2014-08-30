@@ -8,6 +8,17 @@
 		
 			<item>
 				<title>Hello World!</title>
+				<description>&lt;ul&gt;
+  &lt;li&gt;working on api status display&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+				<pubDate>Sun, 31 Aug 2014 00:00:00 +0800</pubDate>
+				<link>http://opsh.github.io/dev_home/api/2014/08/31/api-status.html</link>
+				<guid isPermaLink="true">http://opsh.github.io/dev_home/api/2014/08/31/api-status.html</guid>
+			</item>
+		
+			<item>
+				<title>Hello World!</title>
 				<description>&lt;p&gt;&lt;strong&gt;dbyll&lt;/strong&gt; is minimalist, stylish theme for jekyll. Supports gravatar, account links (github, twitter, e-mail, pinterest, résume file) and a bio.  &lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;dbyll&lt;/strong&gt; is brought to you by &lt;strong&gt;&lt;a href=&quot;http://ismaildemirbilek.com&quot;&gt;dbtek&lt;/a&gt;&lt;/strong&gt;. Open sourced under &lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
