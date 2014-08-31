@@ -162,8 +162,58 @@
   <div>
     
     <ul>
-  <li>working on api status display</li>
+  <li>
+    <p>types of cookbooks</p>
+
+    <p>lang:	ruby, nodejs
+  db:	psql
+  chef:	berkshelf, chef
+  setting:	vim, bashrc
+  service:	dhcp, vpn, vnc, mosh</p>
+  </li>
+  <li>
+    <p>curl status of api</p>
+  </li>
 </ul>
+
+<p><code>curl opsh.servsops.com/api/v1/status</code></p>
+
+<pre><code>2014-07-29T03:57:43Z
+</code></pre>
+
+<ul>
+  <li>curl index of api</li>
+</ul>
+
+<p><code>curl opsh.servsops.com/api/v1/index</code></p>
+
+<pre><code>dhcp,github.com,opsh-cookbooks/isc-dhcp
+chef,github.com,opsh-cookbooks/chef
+bashrc,github.com,opsh-cookbooks/bashrc
+testonly,github.com,opsh-cookbooks/testonly
+kvm,github.com,opsh-cookbooks/kvm
+mosh,github.com,opsh-cookbooks/mosh
+psql,github.com,opsh-cookbooks/psql
+berkshelf,github.com,opsh-cookbooks/berkshelf
+vpn,github.com,opsh-cookbooks/softether
+tty,github.com,opsh-cookbooks/tty
+vim,github.com,opsh-cookbooks/vim
+vnc,github.com,opsh-cookbooks/vnc
+nodejs,github.com,opsh-cookbooks/nodejs
+ruby,github.com,opsh-cookbooks/ruby
+</code></pre>
+
+<ul>
+  <li>curl recipes of cookbook</li>
+</ul>
+
+<p><code>curl opsh.servsops.com/api/v1/github.com/opsh-cookbooks/bashrc</code></p>
+
+<pre><code>alias_git
+env_ps
+global_alias_git
+global_history_log
+</code></pre>
 
     
   </div>

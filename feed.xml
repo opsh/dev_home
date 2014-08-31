@@ -9,8 +9,58 @@
 			<item>
 				<title>OPSH API</title>
 				<description>&lt;ul&gt;
-  &lt;li&gt;working on api status display&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;types of cookbooks&lt;/p&gt;
+
+    &lt;p&gt;lang:	ruby, nodejs
+  db:	psql
+  chef:	berkshelf, chef
+  setting:	vim, bashrc
+  service:	dhcp, vpn, vnc, mosh&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;curl status of api&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;curl opsh.servsops.com/api/v1/status&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;2014-07-29T03:57:43Z
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;curl index of api&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;curl opsh.servsops.com/api/v1/index&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dhcp,github.com,opsh-cookbooks/isc-dhcp
+chef,github.com,opsh-cookbooks/chef
+bashrc,github.com,opsh-cookbooks/bashrc
+testonly,github.com,opsh-cookbooks/testonly
+kvm,github.com,opsh-cookbooks/kvm
+mosh,github.com,opsh-cookbooks/mosh
+psql,github.com,opsh-cookbooks/psql
+berkshelf,github.com,opsh-cookbooks/berkshelf
+vpn,github.com,opsh-cookbooks/softether
+tty,github.com,opsh-cookbooks/tty
+vim,github.com,opsh-cookbooks/vim
+vnc,github.com,opsh-cookbooks/vnc
+nodejs,github.com,opsh-cookbooks/nodejs
+ruby,github.com,opsh-cookbooks/ruby
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;curl recipes of cookbook&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;curl opsh.servsops.com/api/v1/github.com/opsh-cookbooks/bashrc&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;alias_git
+env_ps
+global_alias_git
+global_history_log
+&lt;/code&gt;&lt;/pre&gt;
 </description>
 				<pubDate>Sun, 31 Aug 2014 00:00:00 +0800</pubDate>
 				<link>http://opsh.github.io/dev_home/api/2014/08/31/api-status.html</link>
