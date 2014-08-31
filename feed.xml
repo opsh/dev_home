@@ -7,6 +7,44 @@
 		<atom:link href="http://opsh.github.io/dev_home/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>install ruby</title>
+				<description>&lt;h4 id=&quot;use-apt-get-ruby-to-install-in-ubuntu-1404&quot;&gt;use apt-get ruby to install in ubuntu 14.04&lt;/h4&gt;
+
+&lt;p&gt;ubuntu 14.04 provide ruby1.9 and ruby2.0&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Use ruby1.9&lt;/p&gt;
+
+    &lt;p&gt;If want to ruby1.9 just default package will be fine.&lt;/p&gt;
+
+    &lt;p&gt;&lt;code&gt;apt-get install ruby ruby-dev&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Use ruby2.0&lt;/p&gt;
+
+    &lt;p&gt;Because ubuntu 14.04 default use 1.9, it will be tricky if you want to use 2.0 .&lt;/p&gt;
+
+    &lt;p&gt;&lt;code&gt;apt-get install ruby2.0 ruby2.0-dev&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;The problem is which gem ubuntu is using, ubuntu has gem1.9 and gem2.0. Default /usr/bin/gem is linked to /usr/bin/gem1.9, so you need to relink /usr/bin/gem to /usr/bin/gem2.0.&lt;/p&gt;
+
+    &lt;p&gt;Then install rake and bundler. And notice don’t use apt-get to install rake and bunlder. (If you did, you need to relink them too.)&lt;/p&gt;
+
+    &lt;p&gt;&lt;code&gt;rm /usr/bin/gem&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;code&gt;ln -s /usr/bin/gem2.0 /usr/bin/gem&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;code&gt;gem install rake bundler&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</description>
+				<pubDate>Sun, 31 Aug 2014 00:00:00 +0800</pubDate>
+				<link>http://opsh.github.io/dev_home/opsh/cookbook/2014/08/31/install-ruby.html</link>
+				<guid isPermaLink="true">http://opsh.github.io/dev_home/opsh/cookbook/2014/08/31/install-ruby.html</guid>
+			</item>
+		
+			<item>
 				<title>OPSH API</title>
 				<description>&lt;ul&gt;
   &lt;li&gt;types of cookbooks&lt;/li&gt;

@@ -156,6 +156,59 @@
   </span>
 
   <h2>
+    <a href="http://opsh.github.io/dev_home/opsh/cookbook/2014/08/31/install-ruby.html">install ruby</a>
+  </h2>
+
+  <div>
+    
+    <h4 id="use-apt-get-ruby-to-install-in-ubuntu-1404">use apt-get ruby to install in ubuntu 14.04</h4>
+
+<p>ubuntu 14.04 provide ruby1.9 and ruby2.0</p>
+
+<ol>
+  <li>
+    <p>Use ruby1.9</p>
+
+    <p>If want to ruby1.9 just default package will be fine.</p>
+
+    <p><code>apt-get install ruby ruby-dev</code></p>
+  </li>
+  <li>
+    <p>Use ruby2.0</p>
+
+    <p>Because ubuntu 14.04 default use 1.9, it will be tricky if you want to use 2.0 .</p>
+
+    <p><code>apt-get install ruby2.0 ruby2.0-dev</code></p>
+
+    <p>The problem is which gem ubuntu is using, ubuntu has gem1.9 and gem2.0. Default /usr/bin/gem is linked to /usr/bin/gem1.9, so you need to relink /usr/bin/gem to /usr/bin/gem2.0.</p>
+
+    <p>Then install rake and bundler. And notice don’t use apt-get to install rake and bunlder. (If you did, you need to relink them too.)</p>
+
+    <p><code>rm /usr/bin/gem</code></p>
+
+    <p><code>ln -s /usr/bin/gem2.0 /usr/bin/gem</code></p>
+
+    <p><code>gem install rake bundler</code></p>
+  </li>
+</ol>
+
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+
+  <span class="post-date">
+    
+    August
+    31st,
+    
+    2014
+  </span>
+
+  <h2>
     <a href="http://opsh.github.io/dev_home/api/2014/08/31/api-status.html">OPSH API</a>
   </h2>
 
