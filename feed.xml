@@ -9,18 +9,20 @@
 			<item>
 				<title>OPSH API</title>
 				<description>&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;types of cookbooks&lt;/p&gt;
+  &lt;li&gt;types of cookbooks&lt;/li&gt;
+&lt;/ul&gt;
 
-    &lt;p&gt;lang:	ruby, nodejs
-  db:	psql
-  chef:	berkshelf, chef
-  setting:	vim, bashrc
-  service:	dhcp, vpn, vnc, mosh&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;curl status of api&lt;/p&gt;
-  &lt;/li&gt;
+&lt;p&gt;overview:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;lang:		ruby, nodejs
+db:		psql
+chef:		berkshelf, chef
+setting:	vim, bashrc
+service:	dhcp, vpn, vnc, mosh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;curl status of api&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;code&gt;curl opsh.servsops.com/api/v1/status&lt;/code&gt;&lt;/p&gt;
