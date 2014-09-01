@@ -161,7 +161,7 @@
 
   <div>
     
-    <h4 id="use-apt-get-ruby-to-install-in-ubuntu-1404">use apt-get ruby to install in ubuntu 14.04</h4>
+    <h4 id="use-apt-get-to-install-ruby-ubuntu-1404">use apt-get to install ruby [ubuntu 14.04]</h4>
 
 <p>ubuntu 14.04 provide ruby1.9 and ruby2.0</p>
 
@@ -192,6 +192,30 @@
   </li>
 </ol>
 
+<h4 id="use-rbenv-to-install-ruby-ubuntu-1404">use rbenv to install ruby [ubuntu 14.04]</h4>
+
+<p>There are some patchs need to apply during early period of using ubuntu 14.04. Because a newer version of readline library is used in ubuntu 14.04, some readline functions in ruby source code is deprecated, thus failed to compile. This problem is solved now.</p>
+
+<p>You can choose rbenv or rvm. Generally rbenv is simpler. Rbenv use ruby-build to compile and install ruby versions</p>
+
+<ol>
+  <li>
+    <p>install rbenv</p>
+
+    <p><code>git clone https://github.com/sstephenson/rbenv.git ~/.rbenv</code></p>
+
+    <p><code>echo 'export PATH="$HOME/.rbenv/bin:$PATH"' &gt;&gt; ~/.bash_profile</code></p>
+
+    <p><code>echo 'eval "$(rbenv init -)"' &gt;&gt; ~/.bash_profile</code></p>
+  </li>
+  <li>
+    <p>install ruby-build as a rbenv plugin</p>
+
+    <p><code>git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build</code></p>
+  </li>
+</ol>
+
+
     
   </div>
 
@@ -209,7 +233,7 @@
   </span>
 
   <h2>
-    <a href="http://opsh.github.io/dev_home/api/2014/08/31/api-status.html">OPSH API</a>
+    <a href="http://opsh.github.io/dev_home/api/2014/08/31/api-status.html">opsh api</a>
   </h2>
 
   <div>

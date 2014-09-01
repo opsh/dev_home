@@ -8,7 +8,7 @@
 		
 			<item>
 				<title>install ruby</title>
-				<description>&lt;h4 id=&quot;use-apt-get-ruby-to-install-in-ubuntu-1404&quot;&gt;use apt-get ruby to install in ubuntu 14.04&lt;/h4&gt;
+				<description>&lt;h4 id=&quot;use-apt-get-to-install-ruby-ubuntu-1404&quot;&gt;use apt-get to install ruby [ubuntu 14.04]&lt;/h4&gt;
 
 &lt;p&gt;ubuntu 14.04 provide ruby1.9 and ruby2.0&lt;/p&gt;
 
@@ -38,6 +38,30 @@
     &lt;p&gt;&lt;code&gt;gem install rake bundler&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;h4 id=&quot;use-rbenv-to-install-ruby-ubuntu-1404&quot;&gt;use rbenv to install ruby [ubuntu 14.04]&lt;/h4&gt;
+
+&lt;p&gt;There are some patchs need to apply during early period of using ubuntu 14.04. Because a newer version of readline library is used in ubuntu 14.04, some readline functions in ruby source code is deprecated, thus failed to compile. This problem is solved now.&lt;/p&gt;
+
+&lt;p&gt;You can choose rbenv or rvm. Generally rbenv is simpler. Rbenv use ruby-build to compile and install ruby versions&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;install rbenv&lt;/p&gt;
+
+    &lt;p&gt;&lt;code&gt;git clone https://github.com/sstephenson/rbenv.git ~/.rbenv&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;code&gt;echo &#39;export PATH=&quot;$HOME/.rbenv/bin:$PATH&quot;&#39; &amp;gt;&amp;gt; ~/.bash_profile&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;code&gt;echo &#39;eval &quot;$(rbenv init -)&quot;&#39; &amp;gt;&amp;gt; ~/.bash_profile&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;install ruby-build as a rbenv plugin&lt;/p&gt;
+
+    &lt;p&gt;&lt;code&gt;git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
 </description>
 				<pubDate>Sun, 31 Aug 2014 00:00:00 +0800</pubDate>
 				<link>http://opsh.github.io/dev_home/opsh/cookbook/2014/08/31/install-ruby.html</link>
@@ -45,7 +69,7 @@
 			</item>
 		
 			<item>
-				<title>OPSH API</title>
+				<title>opsh api</title>
 				<description>&lt;ul&gt;
   &lt;li&gt;types of cookbooks&lt;/li&gt;
 &lt;/ul&gt;
