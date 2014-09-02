@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Install Ruby</title>
+	<title>Prevent DHCP Nameservers</title>
 	
 	<meta name="author" content="opsh">
 
@@ -140,7 +140,7 @@
 
 	<div class="col-sm-9 col-sm-offset-3">
 		<div class="page-header">
-  <h1>Install Ruby </h1>
+  <h1>Prevent DHCP Nameservers </h1>
 </div>
 	
 <article>
@@ -148,66 +148,30 @@
 	<div class="col-sm-10">
 	 <span class="post-date">
 	   
-	   August 
-	   31st,
+	   September 
+	   2nd,
 	     
 	   2014
 	 </span>
 	  <div class="article_body">
-	  <h4 id="use-apt-get-to-install-ruby-ubuntu-1404">use apt-get to install ruby [ubuntu 14.04]</h4>
+	  <h4 id="isp-dhcp-nameserver">isp dhcp nameserver</h4>
 
-<p>ubuntu 14.04 provide ruby1.9 and ruby2.0</p>
-
-<ol>
-  <li>
-    <p>Use ruby1.9</p>
-
-    <p>If want to ruby1.9 just default package will be fine.</p>
-
-    <p><code>apt-get install ruby ruby-dev</code></p>
-  </li>
-  <li>
-    <p>Use ruby2.0</p>
-
-    <p>Because ubuntu 14.04 default use 1.9, it will be tricky if you want to use 2.0 .</p>
-
-    <p><code>apt-get install ruby2.0 ruby2.0-dev</code></p>
-
-    <p>The problem is which gem ubuntu is using, ubuntu has gem1.9 and gem2.0. Default /usr/bin/gem is linked to /usr/bin/gem1.9, so you need to relink /usr/bin/gem to /usr/bin/gem2.0.</p>
-
-    <p>Then install rake and bundler. And notice don’t use apt-get to install rake and bunlder. (If you did, you need to relink them too.)</p>
-
-    <p><code>rm /usr/bin/gem</code></p>
-
-    <p><code>ln -s /usr/bin/gem2.0 /usr/bin/gem</code></p>
-
-    <p><code>gem install rake bundler</code></p>
-  </li>
-</ol>
-
-<h4 id="use-rbenv-to-install-ruby-ubuntu-1404">use rbenv to install ruby [ubuntu 14.04]</h4>
-
-<p>There are some patchs need to apply during early period of using ubuntu 14.04. Because a newer version of readline library is used in ubuntu 14.04, some readline functions in ruby source code is deprecated, thus failed to compile. This problem is solved now.</p>
-
-<p>You can choose rbenv or rvm. Generally rbenv is simpler. Rbenv use ruby-build to compile and install ruby versions</p>
+<p>According to <a href="http://hackercodex.com/guide/how-to-stop-isp-dns-server-hijacking/">how-to-stop-isp-dns-server-hijacking</a>, ISP will redirect you to an ad website. I will do something to stop this.</p>
 
 <ol>
   <li>
-    <p>install rbenv</p>
+    <p>Edit /etc/dhcp/dhclient.conf. I have a problem when use “supersede domain-name-servers 127.16.8.1, 8.8.8.8;”, ubuntu only use 127.16.8.1 rather than both nameservers.</p>
 
-    <p><code>git clone https://github.com/sstephenson/rbenv.git ~/.rbenv</code></p>
-
-    <p><code>echo 'export PATH="$HOME/.rbenv/bin:$PATH"' &gt;&gt; ~/.bash_profile</code></p>
-
-    <p><code>echo 'eval "$(rbenv init -)"' &gt;&gt; ~/.bash_profile</code></p>
+    <p>interface “eth0” {
+   supersede domain-name-servers 8.8.8.8;
+ }</p>
   </li>
   <li>
-    <p>install ruby-build as a rbenv plugin</p>
+    <p>Edit /etc/resolvconf/resolv.conf.d/head, if you <code>ifdown eth0; ifup eth0</code>, ubuntu will use the content in this file first. Then use the nameserver in dhclient.conf. I added my own nameserver to this file.</p>
 
-    <p><code>git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build</code></p>
+    <p>nameserver 127.16.8.1</p>
   </li>
 </ol>
-
 
 	  </div>
 
@@ -217,13 +181,8 @@
 		  
 		  
 			 
-				<li><a href="http://opsh.github.io/dev_home/categories.html#opsh-ref">
-					opsh <span>(1)</span>
-					,
-				</a></li>
-			 
-				<li><a href="http://opsh.github.io/dev_home/categories.html#cookbook-ref">
-					cookbook <span>(1)</span>
+				<li><a href="http://opsh.github.io/dev_home/categories.html#general-ref">
+					general <span>(2)</span>
 					
 				</a></li>
 			
@@ -231,22 +190,6 @@
 		</ul>
 		  
 
-		
-		<ul class="list-inline">
-		  <li><i class="fa fa-tags"></i></li>
-		  
-		  
-			 
-				<li>
-					<a href="http://opsh.github.io/dev_home/tags.html#cookbook-ref">
-					cookbook <span>(1)</span>
-					
-					</a>
-				</li>
-			
-		  
-		  
-		</ul>
 		  
 
 		<hr>
@@ -254,7 +197,7 @@
 		<div>
       <section class="share col-sm-6">
         <h4 class="section-title">Share Post</h4>
-        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Install Ruby"
+        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Prevent DHCP Nameservers"
            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
           <i class="fa fa-twitter fa-lg"></i>
           Twitter
@@ -282,10 +225,10 @@
 
 		<ul class="pager">
 		  
-		  <li class="previous"><a href="http://opsh.github.io/dev_home/api/2014/08/31/api-status.html" title="opsh api">&larr; Previous</a></li>
+		  <li class="previous"><a href="http://opsh.github.io/dev_home/opsh/cookbook/2014/08/31/install-ruby.html" title="Install Ruby">&larr; Previous</a></li>
 		  
 		  
-		  <li class="next"><a href="http://opsh.github.io/dev_home/general/2014/09/02/prevent-dhcp-nameserver.html" title="Prevent DHCP Nameservers">Next &rarr;</a></li>
+		  <li class="next"><a href="http://opsh.github.io/dev_home/general/2014/09/02/use-ruby.html" title="Use Ruby">Next &rarr;</a></li>
 		  
 		</ul>
 

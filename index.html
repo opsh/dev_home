@@ -149,6 +149,73 @@
 
   <span class="post-date">
     
+    September
+    2nd,
+    
+    2014
+  </span>
+
+  <h2>
+    <a href="http://opsh.github.io/dev_home/general/2014/09/02/use-ruby.html">Use Ruby</a>
+  </h2>
+
+  <div>
+    
+    <h4 id="reference">Reference</h4>
+
+<p>Doc: <a href="http://www.isrubyfastyet.com/">Is ruby fast yet?</a></p>
+
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+
+  <span class="post-date">
+    
+    September
+    2nd,
+    
+    2014
+  </span>
+
+  <h2>
+    <a href="http://opsh.github.io/dev_home/general/2014/09/02/prevent-dhcp-nameserver.html">Prevent DHCP Nameservers</a>
+  </h2>
+
+  <div>
+    
+    <h4 id="isp-dhcp-nameserver">isp dhcp nameserver</h4>
+
+<p>According to <a href="http://hackercodex.com/guide/how-to-stop-isp-dns-server-hijacking/">how-to-stop-isp-dns-server-hijacking</a>, ISP will redirect you to an ad website. I will do something to stop this.</p>
+
+<ol>
+  <li>
+    <p>Edit /etc/dhcp/dhclient.conf. I have a problem when use “supersede domain-name-servers 127.16.8.1, 8.8.8.8;”, ubuntu only use 127.16.8.1 rather than both nameservers.</p>
+
+    <p>interface “eth0” {
+   supersede domain-name-servers 8.8.8.8;
+ }</p>
+  </li>
+  <li>
+    <p>Edit /etc/resolvconf/resolv.conf.d/head, if you <code>ifdown eth0; ifup eth0</code>, ubuntu will use the content in this file first. Then use the nameserver in dhclient.conf. I added my own nameserver to this file.</p>
+
+    <p>nameserver 127.16.8.1</p>
+  </li>
+</ol>
+
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+
+  <span class="post-date">
+    
     August
     31st,
     
@@ -156,7 +223,7 @@
   </span>
 
   <h2>
-    <a href="http://opsh.github.io/dev_home/opsh/cookbook/2014/08/31/install-ruby.html">install ruby</a>
+    <a href="http://opsh.github.io/dev_home/opsh/cookbook/2014/08/31/install-ruby.html">Install Ruby</a>
   </h2>
 
   <div>

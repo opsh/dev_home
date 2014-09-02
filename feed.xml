@@ -7,7 +7,44 @@
 		<atom:link href="http://opsh.github.io/dev_home/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>install ruby</title>
+				<title>Use Ruby</title>
+				<description>&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+
+&lt;p&gt;Doc: &lt;a href=&quot;http://www.isrubyfastyet.com/&quot;&gt;Is ruby fast yet?&lt;/a&gt;&lt;/p&gt;
+</description>
+				<pubDate>Tue, 02 Sep 2014 00:00:00 +0800</pubDate>
+				<link>http://opsh.github.io/dev_home/general/2014/09/02/use-ruby.html</link>
+				<guid isPermaLink="true">http://opsh.github.io/dev_home/general/2014/09/02/use-ruby.html</guid>
+			</item>
+		
+			<item>
+				<title>Prevent DHCP Nameservers</title>
+				<description>&lt;h4 id=&quot;isp-dhcp-nameserver&quot;&gt;isp dhcp nameserver&lt;/h4&gt;
+
+&lt;p&gt;According to &lt;a href=&quot;http://hackercodex.com/guide/how-to-stop-isp-dns-server-hijacking/&quot;&gt;how-to-stop-isp-dns-server-hijacking&lt;/a&gt;, ISP will redirect you to an ad website. I will do something to stop this.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Edit /etc/dhcp/dhclient.conf. I have a problem when use “supersede domain-name-servers 127.16.8.1, 8.8.8.8;”, ubuntu only use 127.16.8.1 rather than both nameservers.&lt;/p&gt;
+
+    &lt;p&gt;interface “eth0” {
+   supersede domain-name-servers 8.8.8.8;
+ }&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Edit /etc/resolvconf/resolv.conf.d/head, if you &lt;code&gt;ifdown eth0; ifup eth0&lt;/code&gt;, ubuntu will use the content in this file first. Then use the nameserver in dhclient.conf. I added my own nameserver to this file.&lt;/p&gt;
+
+    &lt;p&gt;nameserver 127.16.8.1&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</description>
+				<pubDate>Tue, 02 Sep 2014 00:00:00 +0800</pubDate>
+				<link>http://opsh.github.io/dev_home/general/2014/09/02/prevent-dhcp-nameserver.html</link>
+				<guid isPermaLink="true">http://opsh.github.io/dev_home/general/2014/09/02/prevent-dhcp-nameserver.html</guid>
+			</item>
+		
+			<item>
+				<title>Install Ruby</title>
 				<description>&lt;h4 id=&quot;use-apt-get-to-install-ruby-ubuntu-1404&quot;&gt;use apt-get to install ruby [ubuntu 14.04]&lt;/h4&gt;
 
 &lt;p&gt;ubuntu 14.04 provide ruby1.9 and ruby2.0&lt;/p&gt;
